@@ -17,8 +17,6 @@ class DataManager: NSObject, ObservableObject {
     /// Add the Core Data container with the model name
     let container: NSPersistentContainer = NSPersistentContainer(name: "Model")
     
-    
-    
     /// Default init method. Load the Core Data container
     override init() {
         super.init()
@@ -27,7 +25,6 @@ class DataManager: NSObject, ObservableObject {
     
     class func retrieve(completion: @escaping (([String:Any]?)) -> Void) {
         DispatchQueue.main.async {
-            
             let context = DataManager.shared.container.viewContext
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Credentials")
             fetchRequest.returnsObjectsAsFaults = false
@@ -41,7 +38,5 @@ class DataManager: NSObject, ObservableObject {
                 completion(nil)
             }
         }
-    }
-    
-    
+    }    
 }
