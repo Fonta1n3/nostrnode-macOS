@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A90FFF429D5F216003E0729 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A90FFF229D5F216003E0729 /* Model.xcdatamodeld */; };
+		0A90FFF629D5F39E003E0729 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90FFF529D5F39E003E0729 /* DataManager.swift */; };
+		0A90FFF929D6011C003E0729 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90FFF829D6011C003E0729 /* Extensions.swift */; };
+		0A9A2F6129D39F5000E577FE /* nostrnodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A2F6029D39F5000E577FE /* nostrnodeApp.swift */; };
+		0A9A2F6329D39F5000E577FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A2F6229D39F5000E577FE /* ContentView.swift */; };
+		0A9A2F6529D39F5100E577FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9A2F6429D39F5100E577FE /* Assets.xcassets */; };
+		0A9A2F6829D39F5100E577FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9A2F6729D39F5100E577FE /* Preview Assets.xcassets */; };
+		0A9A2F7029D3A1D800E577FE /* StreamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A2F6F29D3A1D800E577FE /* StreamManager.swift */; };
+		0A9A2F7529D3A4D200E577FE /* RNCryptor in Frameworks */ = {isa = PBXBuildFile; productRef = 0A9A2F7429D3A4D200E577FE /* RNCryptor */; };
+		0A9A2F7729D3A74300E577FE /* NostrFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A2F7629D3A74300E577FE /* NostrFilter.swift */; };
+		0A9A2F7929D3A7B300E577FE /* NostrEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A2F7829D3A7B300E577FE /* NostrEvent.swift */; };
+		0A9A2F7C29D3A87200E577FE /* secp256k1 in Frameworks */ = {isa = PBXBuildFile; productRef = 0A9A2F7B29D3A87200E577FE /* secp256k1 */; };
+		0A9A2F7E29D3A90400E577FE /* NostrKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A2F7D29D3A90400E577FE /* NostrKind.swift */; };
+		0A9A2F8029D3A94100E577FE /* NostrResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A2F7F29D3A94100E577FE /* NostrResponse.swift */; };
+		0A9A2F8229D3BB3600E577FE /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A2F8129D3BB3600E577FE /* Crypto.swift */; };
+		0A9A2F8429D3BF4B00E577FE /* BitcoinCoreRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A2F8329D3BF4B00E577FE /* BitcoinCoreRPC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A90FFF329D5F216003E0729 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0A90FFF529D5F39E003E0729 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0A90FFF829D6011C003E0729 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0A9A2F5D29D39F5000E577FE /* nostrnode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nostrnode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A9A2F6029D39F5000E577FE /* nostrnodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nostrnodeApp.swift; sourceTree = "<group>"; };
+		0A9A2F6229D39F5000E577FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0A9A2F6429D39F5100E577FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A9A2F6729D39F5100E577FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0A9A2F6929D39F5100E577FE /* nostrnode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nostrnode.entitlements; sourceTree = "<group>"; };
+		0A9A2F6F29D3A1D800E577FE /* StreamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamManager.swift; sourceTree = "<group>"; };
+		0A9A2F7629D3A74300E577FE /* NostrFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostrFilter.swift; sourceTree = "<group>"; };
+		0A9A2F7829D3A7B300E577FE /* NostrEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostrEvent.swift; sourceTree = "<group>"; };
+		0A9A2F7D29D3A90400E577FE /* NostrKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostrKind.swift; sourceTree = "<group>"; };
+		0A9A2F7F29D3A94100E577FE /* NostrResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostrResponse.swift; sourceTree = "<group>"; };
+		0A9A2F8129D3BB3600E577FE /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		0A9A2F8329D3BF4B00E577FE /* BitcoinCoreRPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinCoreRPC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A9A2F5A29D39F5000E577FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9A2F7529D3A4D200E577FE /* RNCryptor in Frameworks */,
+				0A9A2F7C29D3A87200E577FE /* secp256k1 in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A90FFF729D600A3003E0729 /* Nostr */ = {
+			isa = PBXGroup;
+			children = (
+				0A9A2F6F29D3A1D800E577FE /* StreamManager.swift */,
+				0A9A2F7F29D3A94100E577FE /* NostrResponse.swift */,
+				0A9A2F7829D3A7B300E577FE /* NostrEvent.swift */,
+				0A9A2F7D29D3A90400E577FE /* NostrKind.swift */,
+				0A9A2F7629D3A74300E577FE /* NostrFilter.swift */,
+			);
+			path = Nostr;
+			sourceTree = "<group>";
+		};
+		0A9A2F5429D39F5000E577FE = {
+			isa = PBXGroup;
+			children = (
+				0A9A2F5F29D39F5000E577FE /* nostrnode */,
+				0A9A2F5E29D39F5000E577FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A9A2F5E29D39F5000E577FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A9A2F5D29D39F5000E577FE /* nostrnode.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A9A2F5F29D39F5000E577FE /* nostrnode */ = {
+			isa = PBXGroup;
+			children = (
+				0A9A2F6029D39F5000E577FE /* nostrnodeApp.swift */,
+				0A9A2F6229D39F5000E577FE /* ContentView.swift */,
+				0A9A2F6429D39F5100E577FE /* Assets.xcassets */,
+				0A9A2F6929D39F5100E577FE /* nostrnode.entitlements */,
+				0A9A2F6629D39F5100E577FE /* Preview Content */,
+				0A90FFF729D600A3003E0729 /* Nostr */,
+				0A90FFF229D5F216003E0729 /* Model.xcdatamodeld */,
+				0A9A2F8129D3BB3600E577FE /* Crypto.swift */,
+				0A9A2F8329D3BF4B00E577FE /* BitcoinCoreRPC.swift */,
+				0A90FFF529D5F39E003E0729 /* DataManager.swift */,
+				0A90FFF829D6011C003E0729 /* Extensions.swift */,
+			);
+			path = nostrnode;
+			sourceTree = "<group>";
+		};
+		0A9A2F6629D39F5100E577FE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0A9A2F6729D39F5100E577FE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A9A2F5C29D39F5000E577FE /* nostrnode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A9A2F6C29D39F5100E577FE /* Build configuration list for PBXNativeTarget "nostrnode" */;
+			buildPhases = (
+				0A9A2F5929D39F5000E577FE /* Sources */,
+				0A9A2F5A29D39F5000E577FE /* Frameworks */,
+				0A9A2F5B29D39F5000E577FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nostrnode;
+			packageProductDependencies = (
+				0A9A2F7429D3A4D200E577FE /* RNCryptor */,
+				0A9A2F7B29D3A87200E577FE /* secp256k1 */,
+			);
+			productName = nostrnode;
+			productReference = 0A9A2F5D29D39F5000E577FE /* nostrnode.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A9A2F5529D39F5000E577FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					0A9A2F5C29D39F5000E577FE = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 0A9A2F5829D39F5000E577FE /* Build configuration list for PBXProject "nostrnode" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A9A2F5429D39F5000E577FE;
+			packageReferences = (
+				0A9A2F7329D3A4D200E577FE /* XCRemoteSwiftPackageReference "RNCryptor" */,
+				0A9A2F7A29D3A87200E577FE /* XCRemoteSwiftPackageReference "secp256k1.swift" */,
+			);
+			productRefGroup = 0A9A2F5E29D39F5000E577FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A9A2F5C29D39F5000E577FE /* nostrnode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A9A2F5B29D39F5000E577FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9A2F6829D39F5100E577FE /* Preview Assets.xcassets in Resources */,
+				0A9A2F6529D39F5100E577FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A9A2F5929D39F5000E577FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9A2F7E29D3A90400E577FE /* NostrKind.swift in Sources */,
+				0A90FFF629D5F39E003E0729 /* DataManager.swift in Sources */,
+				0A9A2F7029D3A1D800E577FE /* StreamManager.swift in Sources */,
+				0A9A2F6329D39F5000E577FE /* ContentView.swift in Sources */,
+				0A9A2F8229D3BB3600E577FE /* Crypto.swift in Sources */,
+				0A9A2F8029D3A94100E577FE /* NostrResponse.swift in Sources */,
+				0A9A2F8429D3BF4B00E577FE /* BitcoinCoreRPC.swift in Sources */,
+				0A9A2F7729D3A74300E577FE /* NostrFilter.swift in Sources */,
+				0A90FFF929D6011C003E0729 /* Extensions.swift in Sources */,
+				0A9A2F7929D3A7B300E577FE /* NostrEvent.swift in Sources */,
+				0A90FFF429D5F216003E0729 /* Model.xcdatamodeld in Sources */,
+				0A9A2F6129D39F5000E577FE /* nostrnodeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A9A2F6A29D39F5100E577FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A9A2F6B29D39F5100E577FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		0A9A2F6D29D39F5100E577FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = nostrnode/nostrnode.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"nostrnode/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 8JHDU5M9KD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = nostrnode;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dentonllc.nostrnode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = nostrnode;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0A9A2F6E29D39F5100E577FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = nostrnode/nostrnode.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"nostrnode/Preview Content\"";
+				DEVELOPMENT_TEAM = 8JHDU5M9KD;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = nostrnode;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dentonllc.nostrnode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A9A2F5829D39F5000E577FE /* Build configuration list for PBXProject "nostrnode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A9A2F6A29D39F5100E577FE /* Debug */,
+				0A9A2F6B29D39F5100E577FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A9A2F6C29D39F5100E577FE /* Build configuration list for PBXNativeTarget "nostrnode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A9A2F6D29D39F5100E577FE /* Debug */,
+				0A9A2F6E29D39F5100E577FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A9A2F7329D3A4D200E577FE /* XCRemoteSwiftPackageReference "RNCryptor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RNCryptor/RNCryptor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		0A9A2F7A29D3A87200E577FE /* XCRemoteSwiftPackageReference "secp256k1.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GigaBitcoin/secp256k1.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A9A2F7429D3A4D200E577FE /* RNCryptor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A9A2F7329D3A4D200E577FE /* XCRemoteSwiftPackageReference "RNCryptor" */;
+			productName = RNCryptor;
+		};
+		0A9A2F7B29D3A87200E577FE /* secp256k1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A9A2F7A29D3A87200E577FE /* XCRemoteSwiftPackageReference "secp256k1.swift" */;
+			productName = secp256k1;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		0A90FFF229D5F216003E0729 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A90FFF329D5F216003E0729 /* Model.xcdatamodel */,
+			);
+			currentVersion = 0A90FFF329D5F216003E0729 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0A9A2F5529D39F5000E577FE /* Project object */;
+}
