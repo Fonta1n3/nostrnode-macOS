@@ -13,6 +13,7 @@ final class StreamManager: NSObject {
     var webSocket: URLSessionWebSocketTask?
     var opened = false
     var eoseReceivedBlock: (((Bool)) -> Void)?
+    var errorReceivedBlock: (((String)) -> Void)?
     var pongReceivedBlock: (((Bool)) -> Void)?
     var onDoneBlock: (((response: Any?, errorDesc: String?)) -> Void)?
     let subId = Crypto.randomKey
@@ -61,6 +62,9 @@ final class StreamManager: NSObject {
                         parseEventDict(arr: jsonArray)
                     case "OK":
                         onDoneBlock!((nil, jsonArray[3] as? String))
+                    case "NOTICE":
+                        guard let noticeDesc = jsonArray[1] as? String else { return }
+                        errorReceivedBlock!(noticeDesc)
                     default:
                         break
                     }
@@ -159,6 +163,7 @@ final class StreamManager: NSObject {
             let filter_json_str = String(decoding: filter_json, as: UTF8.self)
             req += filter_json_str
             req += "]"
+            print("req: \(req)")
             self.sendMsg(string: req)
         }
     }
@@ -304,6 +309,8 @@ final class StreamManager: NSObject {
     
     func closeWebSocket() {
         self.webSocket?.cancel(with: .goingAway, reason: nil)
+        self.webSocket = nil
+        self.opened = false
     }
     
     func pingWebsocket() {
@@ -326,8 +333,17 @@ extension StreamManager: URLSessionWebSocketDelegate {
     
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
+        print("didCloseWith closeCode: \(closeCode)")
         webSocket = nil
         opened = false
     }
+    
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        if let error = error {
+            print("DEBUG: didCompleteWithError called: error = \(error.localizedDescription)")
+            errorReceivedBlock!(error.localizedDescription)
+        }
+    }
+    
 }
 
